@@ -1,6 +1,10 @@
 # DataBase
  A SQL helper library.
 
+### Needs
+
+Microsoft .NET Framework 4.
+
 ### Support
 
 * Microsoft SQL Server;
