@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataBase</name>
+    </assembly>
+    <members>
+        <member name="F:DataBase.MySqlDB.conn">
+            <summary>
+            实现连接对象的单例模式
+            </summary>
+        </member>
+        <member name="M:DataBase.MySqlDB.GetConnection(System.String)">
+            <summary>
+            获取可用连接对象（单例模式）
+            </summary>
+            <param name="ConnectionString">数据库的连接字符串</param>
+            <returns>连接对象</returns>
+        </member>
+        <member name="M:DataBase.MySqlDB.SelectDataTable(System.String,System.String,MySql.Data.MySqlClient.MySqlParameter[])">
+            <summary>
+            根据给定的查询语句，返回结果数据表
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">给定的查询语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+            <returns>查询结果数据表</returns>
+        </member>
+        <member name="M:DataBase.MySqlDB.UpdateDataTable(System.Data.DataTable,System.String,System.String,MySql.Data.MySqlClient.MySqlParameter[])">
+            <summary>
+            将数据表更新到外部数据源 
+            </summary>
+            <param name="dt">回写的数据表内容</param>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">用于生成Update语句的Select语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+        </member>
+        <member name="M:DataBase.MySqlDB.ExecuteNonQuery(System.String,System.String,MySql.Data.MySqlClient.MySqlParameter[])">
+            <summary>
+            执行非查询语句，返回整型结果（数据表中受影响的行数）
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">非查询语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+            <returns>数据表中受影响的行数</returns>
+        </member>
+        <member name="M:DataBase.MySqlDB.ExecuteScaler(System.String,System.String,MySql.Data.MySqlClient.MySqlParameter[])">
+            <summary>
+            执行统计查询，返回 Object 类型的结果
+            <para>
+            注意：此方法的执行结果为 Object 类型，因此其返回值在使用时要进行类型转换
+            </para>
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">统计查询语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+            <returns>Object类型的查询结果</returns>
+        </member>
+        <member name="M:DataBase.MySqlDB.ExecuteSqlTransaction(System.String,System.String[],MySql.Data.MySqlClient.MySqlParameter[][])">
+            <summary>
+            执行事务
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlStrings">用于传递事务指令集的字符串数组</param>
+            <param name="SqlParameters">事务指令集的参数数组</param>
+        </member>
+        <member name="F:DataBase.OleDB.conn">
+            <summary>
+            实现连接对象的单例模式
+            </summary>
+        </member>
+        <member name="M:DataBase.OleDB.GetConnection(System.String)">
+            <summary>
+            获取可用连接对象（单例模式）
+            </summary>
+            <param name="ConnectionString">数据库的连接字符串</param>
+            <returns>连接对象</returns>
+        </member>
+        <member name="M:DataBase.OleDB.SelectDataTable(System.String,System.String,System.Data.OleDb.OleDbParameter[])">
+            <summary>
+            根据给定的查询语句，返回结果数据表
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">给定的查询语句</param>
+            <param name="OleDbParameters">SQL语句的参数数组</param>
+            <returns>查询结果数据表</returns>
+        </member>
+        <member name="M:DataBase.OleDB.UpdateDataTable(System.Data.DataTable,System.String,System.String,System.Data.OleDb.OleDbParameter[])">
+            <summary>
+            将数据表更新到外部数据源 
+            </summary>
+            <param name="dt">回写的数据表内容</param>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">用于生成Update语句的Select语句</param>
+            <param name="OleDbParameters">SQL语句的参数数组</param>
+        </member>
+        <member name="M:DataBase.OleDB.ExecuteNonQuery(System.String,System.String,System.Data.OleDb.OleDbParameter[])">
+            <summary>
+            执行非查询语句，返回整型结果（数据表中受影响的行数）
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">非查询语句</param>
+            <param name="OleDbParameters">SQL语句的参数数组</param>
+            <returns>数据表中受影响的行数</returns>
+        </member>
+        <member name="M:DataBase.OleDB.ExecuteScaler(System.String,System.String,System.Data.OleDb.OleDbParameter[])">
+            <summary>
+            执行统计查询，返回 Object 类型的结果
+            <para>
+            注意：此方法的执行结果为 Object 类型，因此其返回值在使用时要进行类型转换
+            </para>
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">统计查询语句</param>
+            <param name="OleDbParameters">SQL语句的参数数组</param>
+            <returns>Object类型的查询结果</returns>
+        </member>
+        <member name="M:DataBase.OleDB.ExecuteOleDbTransaction(System.String,System.String[],System.Data.OleDb.OleDbParameter[][])">
+            <summary>
+            执行事务
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlStrings">用于传递事务指令集的字符串数组</param>
+            <param name="OleDbParameters">事务指令集的参数数组</param>
+        </member>
+        <member name="F:DataBase.SqlDB.conn">
+            <summary>
+            实现连接对象的单例模式
+            </summary>
+        </member>
+        <member name="M:DataBase.SqlDB.GetConnection(System.String)">
+            <summary>
+            获取可用连接对象（单例模式）
+            </summary>
+            <param name="ConnectionString">数据库的连接字符串</param>
+            <returns>连接对象</returns>
+        </member>
+        <member name="M:DataBase.SqlDB.SelectDataTable(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            根据给定的查询语句，返回结果数据表
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">给定的查询语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+            <returns>查询结果数据表</returns>
+        </member>
+        <member name="M:DataBase.SqlDB.UpdateDataTable(System.Data.DataTable,System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            将数据表更新到外部数据源 
+            </summary>
+            <param name="dt">回写的数据表内容</param>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">用于生成Update语句的Select语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+        </member>
+        <member name="M:DataBase.SqlDB.ExecuteNonQuery(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行非查询语句，返回整型结果（数据表中受影响的行数）
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">非查询语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+            <returns>数据表中受影响的行数</returns>
+        </member>
+        <member name="M:DataBase.SqlDB.ExecuteScaler(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行统计查询，返回 Object 类型的结果
+            <para>
+            注意：此方法的执行结果为 Object 类型，因此其返回值在使用时要进行类型转换
+            </para>
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlString">统计查询语句</param>
+            <param name="SqlParameters">SQL语句的参数数组</param>
+            <returns>Object类型的查询结果</returns>
+        </member>
+        <member name="M:DataBase.SqlDB.ExecuteSqlTransaction(System.String,System.String[],System.Data.SqlClient.SqlParameter[][])">
+            <summary>
+            执行事务
+            </summary>
+            <param name="ConnectionString">连接字符串</param>
+            <param name="SqlStrings">用于传递事务指令集的字符串数组</param>
+            <param name="SqlParameters">事务指令集的参数数组</param>
+        </member>
+    </members>
+</doc>
