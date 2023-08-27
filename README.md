@@ -1,17 +1,32 @@
 # DataBase
- A SQL helper library.
+一个数据库访问类。
 
-### Needs
+*（注：该项目已包含在JingjingCommonLibrary项目中）*
 
-Microsoft .NET Framework 4.
+### 运行环境
 
-### Support
+Microsoft .NET Framework 4或更高版本。
 
-* Microsoft SQL Server;
-* Microsoft Access;
-* Oracle MySQL;
-* SQLite；
+### 支持的数据库
 
-### Namespace
+- Microsoft SQL Server;
 
-DataBase
+- Microsoft Access;
+
+- Oracle MySQL;
+
+- SQLite；
+
+### 命名空间
+
+- DataBase
+
+### 包含的类
+
+| 命名空间 | 类名     | 作用                           |
+| -------- | -------- | ------------------------------ |
+| DataBase | MySqlDB  | 操作Oracle MySQL数据库         |
+| DataBase | OleDB    | 操作Microsoft Access数据库     |
+| DataBase | SqlDB    | 操作Microsoft SQL Server数据库 |
+| DataBase | SQLiteDB | 操作SQLite数据库               |
+

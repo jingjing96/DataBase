@@ -62,7 +62,7 @@ namespace DataBase
                 SqlCmd.Parameters.Clear();
                 SqlCmd.Dispose();
                 conn.Close();
-                conn.Dispose();
+                //conn.Dispose();
                 return dt;
             }
             catch (Exception ex)
@@ -99,7 +99,7 @@ namespace DataBase
                 SqlCmd.Parameters.Clear();
                 SqlCmd.Dispose();
                 conn.Close();
-                conn.Dispose();
+                //conn.Dispose();
             }
             catch (Exception ex)
             {
@@ -130,7 +130,7 @@ namespace DataBase
                 SqlCmd.Parameters.Clear();
                 SqlCmd.Dispose();
                 conn.Close();
-                conn.Dispose();
+                //conn.Dispose();
                 return i;
             }
             catch (Exception ex)
@@ -165,7 +165,7 @@ namespace DataBase
                 SqlCmd.Parameters.Clear();
                 SqlCmd.Dispose();
                 conn.Close();
-                conn.Dispose();
+                //conn.Dispose();
                 return i;
             }
             catch (Exception ex)
@@ -214,7 +214,7 @@ namespace DataBase
                     SqlCmd.Parameters.Clear();
                     SqlCmd.Dispose();
                     conn.Close();
-                    conn.Dispose();
+                    //conn.Dispose();
                 }
             }
             catch (Exception ex)
