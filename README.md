@@ -1,7 +1,7 @@
 # DataBase
 一个数据库访问类。
 
-*（注：该项目已包含在JingjingCommonLibrary项目中）*
+*（注：该项目已停止更新，原有内容已包含在[JingjingCommonLibrary](https://github.com/jingjing96/JingjingCommonLibrary)项目中。）*
 
 ### 运行环境
 
